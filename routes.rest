@@ -1,0 +1,83 @@
+//LOCALHOST
+### Get all rosters
+GET http://localhost:3000/roster HTTP/1.1
+
+### Get roster member with certain ID
+GET http://localhost:3000/roster/634b9b65079ea8e3274be4b3 HTTP/1.1
+
+###Create Roster Member
+POST http://localhost:3000/roster HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Alex",
+    "lastName": "Newhook",
+    "number": "18",
+    "position": "Center",
+    "shoots": "Left",
+    "height": "5ft, 10in",
+    "weight": "190 pds",
+    "birthday": "01/28/1991" 
+}
+
+### PUT or change roster member
+PUT http://localhost:3000/roster/63325f752e2406fe7c0e841a HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Alex",
+    "lastName": "Newhook",
+    "number": "18",
+    "position": "Center",
+    "shoots": "Left",
+    "height": "5ft, 10in",
+    "weight": "190 pds",
+    "birthday": "01/28/2001" 
+}
+
+### DELETE Roster member
+DELETE http://localhost:3000/rosters/634ccba29b7d106d8c1bfb26 HTTP/1.1
+
+
+
+// PRODUCTION Deploy
+### Get all rosters 
+GET https://cse341team.onrender.com/roster
+
+###Get roster member by ID
+GET https://cse341team.onrender.com/rosters/633bb9c7fca43db1500c9ed1
+
+###Create roster member
+POST https://cse341team.onrender.com/rosters HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Alex",
+    "lastName": "Newhook",
+    "number": "18",
+    "position": "Center",
+    "shoots": "Left",
+    "height": "5ft, 10in",
+    "weight": "190 pds",
+    "birthday": "01/28/2001"
+}
+
+###Put or change roster member
+PUT https://cse341team.onrender.com/rosters/633bae56ac0b9eb7b5bffd4f HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Any",
+    "lastName": "Any",
+    "number": "Any",
+    "position": "Any",
+    "shoots": "Any",
+    "height": "Any",
+    "weight": "Any",
+    "birthday": "Any" 
+}
+
+###Delete roster member
+DELETE https://cse341team.onrender.com/rosters/634ccd8ed8fed479b71fa9b2 HTTP/1.1
+
+
