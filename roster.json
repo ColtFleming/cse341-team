@@ -1,0 +1,232 @@
+{
+  "roster": {
+    "firstName": "Nathan",
+    "lastName": "MacKinnon",
+    "number": "29",
+    "position": "Center",
+    "shoots": "Right",
+    "height": "6ft, 0in",
+    "weight": "200 pds",
+    "birthday": "09/01/1995"
+  },
+  "roster2": {
+    "firstName": "Mikko",
+    "lastName": "Rantanen",
+    "number": "96",
+    "position": "Right Wing",
+    "shoots": "Left",
+    "height": "6ft, 4in",
+    "weight": "215",
+    "birthday": "10/29/1996"
+  },
+  "roster3": {
+    "firstName": "Andrew",
+    "lastName": "Cogliano",
+    "number": "11",
+    "position": "Center",
+    "shoots": "Left",
+    "height": "5ft, 10in",
+    "weight": "179",
+    "birthday": "06/14/1987"
+  },
+  "roster4": {
+    "firstName": "J.T. (Jimothy Timothy)",
+    "lastName": "Compher",
+    "number": "37",
+    "position": "Left Wing",
+    "shoots": "Right",
+    "height": "6ft, 0in",
+    "weight": "190",
+    "birthday": "04/08/1995"
+  },
+  "roster5": {
+    "firstName": "Samuel",
+    "lastName": "Girard",
+    "number": "49",
+    "position": "Defense",
+    "shoots": "Left",
+    "height": "5ft, 10in",
+    "weight": "170",
+    "birthday": "05/12/1998"
+  },
+  "roster6": {
+    "firstName": "Cale",
+    "lastName": "Makar",
+    "number": "8",
+    "position": "Defense",
+    "shoots": "Right",
+    "height": "5ft, 11in",
+    "weight": "187",
+    "birthday": "10/30/1998"
+  },
+  "roster7": {
+    "firstName": "Pavel",
+    "lastName": "Francouz",
+    "number": "39",
+    "position": "Goalie",
+    "shoots": "Left",
+    "height": "6ft, 0in",
+    "weight": "179",
+    "birthday": "06/03/1990"
+  },
+  "roster8": {
+    "firstName": "Anton",
+    "lastName": "Blidh",
+    "number": "36",
+    "position": "Left Wing",
+    "shoots": "Left",
+    "height": "6ft, 1in",
+    "weight": "197",
+    "birthday": "03/14/1995"
+  },
+  "roster9": {
+    "firstName": "Darren",
+    "lastName": "Helm",
+    "number": "43",
+    "position": "Center",
+    "shoots": "Left",
+    "height": "6ft, 0in",
+    "weight": "192",
+    "birthday": "01/21/1987"
+  },
+  "roster10": {
+    "firstName": "Artturi",
+    "lastName": "Lehkonen",
+    "number": "62",
+    "position": "Left Wing",
+    "shoots": "Left",
+    "height": "5ft, 11in",
+    "weight": "179",
+    "birthday": "07/04/1995"
+  },
+  "roster11": {
+    "firstName": "Dryden",
+    "lastName": "Hunt",
+    "number": "22",
+    "position": "Left Wing",
+    "shoots": "Left",
+    "height": "6ft, 0in",
+    "weight": "193",
+    "birthday": "11/24/1995"
+  },
+  "roster12": {
+    "firstName": "Mikhail",
+    "lastName": "Maltsev",
+    "number": "57",
+    "position": "Left Wing",
+    "shoots": "Left",
+    "height": "6ft, 3in",
+    "weight": "198",
+    "birthday": "03/12/1998"
+  },
+  "roster13": {
+    "firstName": "Alex",
+    "lastName": "Newhook",
+    "number": "18",
+    "position": "Center",
+    "shoots": "Left",
+    "height": "5ft, 10in",
+    "weight": "190",
+    "birthday": "01/28/2001"
+  },
+  "roster14": {
+    "firstName": "Valeri",
+    "lastName": "Nichushkin",
+    "number": "13",
+    "position": "Right Wing",
+    "shoots": "Left",
+    "height": "6ft, 4in",
+    "weight": "210",
+    "birthday": "03/04/1995"
+  },
+  "roster15": {
+    "firstName": "Logan",
+    "lastName": "O'Conner",
+    "number": "25",
+    "position": "Right Wing",
+    "shoots": "Right",
+    "height": "6ft, 0in",
+    "weight": "175",
+    "birthday": "08/14/1996"
+  },
+  "roster16": {
+    "firstName": "Evan",
+    "lastName": "Rodriques",
+    "number": "9",
+    "position": "Center",
+    "shoots": "Right",
+    "height": "5ft, 11in",
+    "weight": "184",
+    "birthday": "07/28/1993"
+  },
+  "roster17": {
+    "firstName": "Bowen",
+    "lastName": "Byram",
+    "number": "4",
+    "position": "Defense",
+    "shoots": "Left",
+    "height": "6ft, 1in",
+    "weight": "190",
+    "birthday": "06/13/2001"
+  },
+  "roster18": {
+    "firstName": "Andreas",
+    "lastName": "Englund",
+    "number": "88",
+    "position": "Defense",
+    "shoots": "Left",
+    "height": "6ft, 3in",
+    "weight": "189",
+    "birthday": "01/21/1996"
+  },
+  "roster19": {
+    "firstName": "Erik",
+    "lastName": "Johnson",
+    "number": "6",
+    "position": "Defense",
+    "shoots": "Right",
+    "height": "6ft, 4in",
+    "weight": "225",
+    "birthday": "03/21/1988"
+  },
+  "roster20": {
+    "firstName": "Kurtis",
+    "lastName": "MacDermid",
+    "number": "56",
+    "position": "Defense",
+    "shoots": "Left",
+    "height": "6ft, 5in",
+    "weight": "233",
+    "birthday": "03/25/1994"
+  },
+  "roster21": {
+    "firstName": "Josh",
+    "lastName": "Manson",
+    "number": "42",
+    "position": "Defense",
+    "shoots": "Right",
+    "height": "6ft, 3in",
+    "weight": "218",
+    "birthday": "10/07/1991"
+  },
+  "roster22": {
+    "firstName": "Devon",
+    "lastName": "Toews",
+    "number": "7",
+    "position": "Defense",
+    "shoots": "Left",
+    "height": "6ft, 1in",
+    "weight": "191",
+    "birthday": "02/21/1994"
+  },
+  "roster23": {
+    "firstName": "Alexandar",
+    "lastName": "Georgiev",
+    "number": "40",
+    "position": "Goalie",
+    "shoots": "Left",
+    "height": "6ft, 1in",
+    "weight": "178",
+    "birthday": "02/10/1996"
+  }
+}
