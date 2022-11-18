@@ -1,0 +1,32 @@
+{
+    "injury1" : {
+        "name": "Kurtis MacDermid",
+        "injury": "lower body",
+        "length": "Decemeber 27th"
+    },
+    "injury2" : {
+        "name": "Shane Bowers",
+        "injury": "upper Body",
+        "length": "Decemeber 23rd"
+    },
+    "injury3" : {
+        "name": "Bowen Byram",
+        "injury": "lower body",
+        "length": "Novemeber 19th"
+    },
+    "injury4" : {
+        "name": "Gabriel Landeskog",
+        "injury": "knee",
+        "length": "January 12th"
+    },
+    "injury5" : {
+        "name": "Darren Helm",
+        "injury": "hip",
+        "length": "December 13th"
+    },
+    "injury6" : {
+        "name": "Valeri Nichushkin",
+        "injury": "Ankle",
+        "length": "December 7th"
+    }
+}
