@@ -4,7 +4,7 @@ const ObjectId = require("mongodb").ObjectId;
 const getAll = async (req, res) => {
     mongodb
     .getDb()
-    .db("cse431-team")
+    .db("cse341-team")
     .collection("schedule")
     .find()
     .toArray((err, list) => {
@@ -48,10 +48,7 @@ const addGame = async (req, res) => {
     const newGame = {
         date: req.body.date,
         opponent: req.body.opponent,
-        location : {
-            "city" : req.body.city,
-            "state" : req.body.state
-        }
+        location : req.body.location
     };
     const response = await mongodb
         .getDb()
@@ -82,15 +79,12 @@ const updateGame = async (req, res) => {
     const game = {
         date: req.body.date,
         opponent: req.body.opponent,
-        location : {
-            "city" : req.body.city,
-            "state" : req.body.state
-        }
+        location : req.body.location
     };
     const response = await mongodb
         .getDb()
         .db("cse341-team")
-        .collection("roster")
+        .collection("schedule")
         .replaceOne({_id: gameId }, game);
 
     if (response.modifiedCount > 0) {
