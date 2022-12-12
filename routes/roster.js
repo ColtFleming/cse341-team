@@ -8,6 +8,10 @@ router.get('/', contactsController.getAll);
 
 router.get('/:id', contactsController.getSingle);
 
+router.get('/name/:name', contactsController.getName);
+
+router.get('/number/:number', contactsController.getNumber);
+
 router.post('/', validation.saveRosterMember, contactsController.createContact);
 
 router.put('/:id', validation.saveRosterMember, contactsController.updateContact);
