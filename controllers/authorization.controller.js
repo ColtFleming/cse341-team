@@ -10,7 +10,7 @@ const authorizationController = {
       appConfig.clientID
     }&redirect_uri=${encodeURIComponent(
       appConfig.redirectUrl
-    )}&state=1234&scope=openid%profile%email`;
+    )}&state=1234&scope=openid%20profile%20email`;
 
     res.redirect(authorizationUrl);
   },

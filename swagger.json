@@ -192,7 +192,7 @@
         }
       }
     },
-    "/rosters/name/{name}": {
+    "/rosters/name/{firstName}": {
       "get": {
         "description": "",
         "produces": [
@@ -200,7 +200,7 @@
         ],
         "parameters": [
           {
-            "name": "name",
+            "name": "firstName",
             "in": "path",
             "required": true,
             "type": "string"

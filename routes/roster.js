@@ -8,7 +8,7 @@ router.get('/', contactsController.getAll);
 
 router.get('/:id', contactsController.getSingle);
 
-router.get('/name/:name', contactsController.getName);
+router.get('/name/:firstName', contactsController.getName);
 
 router.get('/number/:number', contactsController.getNumber);
 

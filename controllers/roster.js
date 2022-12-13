@@ -36,10 +36,7 @@ const getSingle = async (req, res) => {
 };
 
 const getName = async (req, res) => {
-  if (!ObjectId.isValid(req.params.firstName)) {
-    res.status(400).json('No one by that name is on the roster');
-  }
-  const userFirstName = new ObjectId(req.params.firstName);
+  const userFirstName = req.params.firstName;
   mongodb
     .getDb()
     .db('cse341')
@@ -48,17 +45,18 @@ const getName = async (req, res) => {
     .toArray((err, result) => {
       if (err) {
         res.status(400).json({ message: err });
+        return;
       }
       res.setHeader('Content-Type', 'application/json');
-      res.status(200).json(result[0]);
+      if (result.length === 0) {
+        return res.status(404).json({ err: `Player ${userFirstName} is not on team!` });
+      }
+      res.status(200).json(result);
     });
 };
 
 const getNumber = async (req, res) => {
-  if (!ObjectId.isValid(req.params.number)) {
-    res.status(400).json('That number is not on the roster');
-  }
-  const userNumber = new ObjectId(req.params.number);
+  const userNumber = req.params.number;
   mongodb
     .getDb()
     .db('cse341')
@@ -69,7 +67,12 @@ const getNumber = async (req, res) => {
         res.status(400).json({ message: err });
       }
       res.setHeader('Content-Type', 'application/json');
-      res.status(200).json(result[0]);
+      if (result.length === 0) {
+        return res
+          .status(404)
+          .json({ err: `${userNumber} is not valid jersey number on the team!` });
+      }
+      res.status(200).json(result);
     });
 };
 
