@@ -45,20 +45,20 @@ const getByID = async (req, res) => {
  * #swagger.description = 'Get injury by injury'
  */
 const getByInjury = async (req, res) => {
-  if (!ObjectId.isValid(req.params.injury)) {
-    res.status(400).json('Must use a valid injury to get injury.');
-  }
-  const userId = new ObjectId(req.params.id);
+  const userInjury = req.params.injury;
   mongodb
     .getDb()
     .db('cse341-team')
     .collection('ir')
-    .find({ _id: userId })
+    .find({ injury: userInjury })
     .toArray((err, result) => {
       if (err) {
         res.status(400).json({ message: err });
       }
       res.setHeader('Content-Type', 'application/json');
+      if (result.length === 0) {
+        return res.status(404).json({ err: `No player is currently out with ${userInjury}!` });
+      }
       res.status(200).json(result[0]);
     });
 };
@@ -67,20 +67,20 @@ const getByInjury = async (req, res) => {
  * #swagger.description = 'Get injury by length'
  */
 const getByLength = async (req, res) => {
-  if (!ObjectId.isValid(req.params.injury)) {
-    res.status(400).json('Must use a valid length to get injury.');
-  }
-  const userId = new ObjectId(req.params.id);
+  const userLength = req.params.length;
   mongodb
     .getDb()
     .db('cse341-team')
     .collection('ir')
-    .find({ _id: userId })
+    .find({ length: userLength })
     .toArray((err, result) => {
       if (err) {
         res.status(400).json({ message: err });
       }
       res.setHeader('Content-Type', 'application/json');
+      if (result.length === 0) {
+        return res.status(404).json({ err: `No player has with that length of injury` });
+      }
       res.status(200).json(result[0]);
     });
 };

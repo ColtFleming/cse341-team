@@ -380,7 +380,7 @@
         }
       }
     },
-    "/injury/{injury}": {
+    "/injury/injury/{injury}": {
       "get": {
         "description": "",
         "produces": [
@@ -400,11 +400,14 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
     },
-    "/injury/{length}": {
+    "/injury/length/{length}": {
       "get": {
         "description": "",
         "produces": [
@@ -424,6 +427,9 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
