@@ -4,31 +4,31 @@ const router = express.Router();
 const injuryController = require('../controllers/injury');
 
 /*****************************************************
-* GET 
-******************************************************/
+ * GET
+ ******************************************************/
 // read all
 router.get('/', injuryController.getAll);
 
 // read by specific filter
 router.get('/:id', injuryController.getByID);
-router.get('/:injury', injuryController.getByInjury);
-router.get('/:length', injuryController.getByLength);
+router.get('/injury/:injury', injuryController.getByInjury);
+router.get('/length/:length', injuryController.getByLength);
 
 /*****************************************************
-* POST
-******************************************************/
+ * POST
+ ******************************************************/
 // create
 router.post('/', injuryController.createInjuryReserve);
 
 /*****************************************************
-* PUT 
-******************************************************/
+ * PUT
+ ******************************************************/
 // update by ID
 router.put('/:id', injuryController.updateInjuryReserve);
 
 /*****************************************************
-* DELETE 
-******************************************************/
+ * DELETE
+ ******************************************************/
 // delete by ID
 router.delete('/:id', injuryController.deleteInjuryReserve);
 
