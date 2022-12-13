@@ -81,3 +81,82 @@ content-type: application/json
 DELETE https://cse341team.onrender.com/rosters/634ccd8ed8fed479b71fa9b2 HTTP/1.1
 
 
+
+//LOCALHOST
+### Get all stats
+GET http://localhost:3000/stats HTTP/1.1
+
+### Get stats with certain ID
+GET http://localhost:3000/stats/637e3a7fbd258ba06e184ca8 HTTP/1.1
+
+###Create team stats
+POST http://localhost:3000/stats HTTP/1.1
+content-type: application/json
+
+{
+    "teamName": "Colorado Avalanche",
+    "goalsFor": 50,
+    "goalsAgainst": 38,
+    "wins": 9,
+    "losses": 5,
+    "overtimeLosses": 1,
+    "pointTotal": 19
+}
+
+### PUT or change team stats
+PUT http://localhost:3000/stats/638e36762e4b3dfc2a3511f7 HTTP/1.1
+content-type: application/json
+
+{
+    "teamName": "Colorado Avalanche",
+    "goalsFor": 50,
+    "goalsAgainst": 38,
+    "wins": 10,
+    "losses": 5,
+    "overtimeLosses": 1,
+    "pointTotal": 19
+}
+
+### DELETE team stats
+DELETE http://localhost:3000/stats/638e36762e4b3dfc2a3511f7 HTTP/1.1
+
+
+
+// PRODUCTION Deploy
+### Get all stats 
+GET https://cse341team.onrender.com/stats
+
+###Get team stats by id
+GET https://cse341team.onrender.com/stats/637e3a7fbd258ba06e184ca8
+
+###Create team stats
+POST https://cse341team.onrender.com/stats HTTP/1.1
+content-type: application/json
+
+{
+    "teamName": "Colorado Avalanche",
+    "goalsFor": 50,
+    "goalsAgainst": 38,
+    "wins": 9,
+    "losses": 5,
+    "overtimeLosses": 1,
+    "pointTotal": 19
+}
+
+###Put or change team stats
+PUT https://cse341team.onrender.com/stats/637e3a7fbd258ba06e184ca8 HTTP/1.1
+content-type: application/json
+
+{
+    "teamName": "Colorado Avalanche",
+    "goalsFor": 50,
+    "goalsAgainst": 38,
+    "wins": 10,
+    "losses": 5,
+    "overtimeLosses": 1,
+    "pointTotal": 19
+}
+
+###Delete team stats
+DELETE https://cse341team.onrender.com/stats/637e3a7fbd258ba06e184ca8 HTTP/1.1
+
