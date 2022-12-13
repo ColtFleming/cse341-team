@@ -7,6 +7,7 @@ const scheduleRoutes = require('./schedule');
 const favoriteRoutes = require('./favorite');
 
 router.use('/', require('./swagger'));
+router.use('/stats', require('./stats'));
 
 router.use('/rosters', rosterRoutes);
 router.use('/injury', injuryRoutes);
