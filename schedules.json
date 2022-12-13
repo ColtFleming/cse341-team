@@ -1,0 +1,47 @@
+[
+    {
+        "gameId" : 1,
+        "date" : "2022-11-19T17:00:00",
+        "opponent" : "Washington Capitals",
+        "location" : {
+            "city" : "Washington",
+            "state" : "DC"
+        }
+    },
+    {
+        "gameId" : 2,
+        "date" : "2022-11-21T18:30:00",
+        "opponent" : "Dallas Stars",
+        "location" : {
+            "city" : "Dallas",
+            "state" : "Texas"
+        }
+    },
+    {
+        "gameId" : 3,
+        "date" : "2022-11-23T20:00:00",
+        "opponent" : "Vancouver Canucks",
+        "location" : {
+            "city" : "Denver",
+            "state" : "Colorado"
+        }
+    },
+    {
+        "gameId" : 4,
+        "date" : "2022-11-25T12:00:00",
+        "opponent" : "Nashville Predators",
+        "location" : {
+            "city" : "Nashville",
+            "state" : "Tenesse"
+        }
+    },
+    {
+        "gameId" : 5,
+        "date" : "2022-11-26T19:00:00",
+        "opponent" : "Dallas Stars",
+        "location" : {
+            "city" : "Dallas",
+            "state" : "Texas"
+        }
+    }
+]

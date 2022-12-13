@@ -23,7 +23,6 @@ const saveRosterMember = (req, res, next) => {
     }
   });
 };
-
 const saveTeamStats = (req, res, next) => {
   const validationRule = {
     teamName: "required|string",
@@ -33,6 +32,27 @@ const saveTeamStats = (req, res, next) => {
     losses: "required|integer",
     overtimeLosses: "required|integer",
     pointTotal: "required|integer",
+     };
+  validator(req.body, validationRule, {}, (err, status) => {
+    if (!status) {
+      res.status(412).send({
+        success: false,
+        message: "Validation failed",
+        data: err,
+      });
+    } else {
+      next();
+    }
+  });
+};
+const saveGame = (req, res, next) => {
+  const validationRule = {
+    date: "required|string",
+    opponent: "required|string",
+    location: {
+      city : "required|string",
+      state: "required|string"
+    }
   };
   validator(req.body, validationRule, {}, (err, status) => {
     if (!status) {
@@ -49,5 +69,6 @@ const saveTeamStats = (req, res, next) => {
 
 module.exports = {
   saveRosterMember,
-  saveTeamStats
+  saveTeamStats,
+  saveGame
 };
