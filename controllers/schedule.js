@@ -4,8 +4,8 @@ const ObjectId = require('mongodb').ObjectId;
 const getAll = async (req, res) => {
   mongodb
     .getDb()
-    .db("cse341-team")
-    .collection("schedule")
+    .db('cse341-team')
+    .collection('schedule')
     .find()
     .toArray((err, list) => {
       if (err) {
@@ -46,54 +46,45 @@ const addGame = async (req, res) => {
     return;
   }
 
-    const newGame = {
-        date: req.body.date,
-        opponent: req.body.opponent,
-        location : req.body.location
-    };
-    const response = await mongodb
-        .getDb()
-        .db("cse341-team")
-        .collection("schedule")
-        .insertOne(newGame);
-
-  if (response.acknowledged) {
-    res.status(201).json(response);
-  } else {
-    res.status(500).json(response.error || 'Some error occurred while adding new game.');
-  }
+  const newGame = {
+    date: req.body.date,
+    opponent: req.body.opponent,
+    city: req.body.location.city,
+    state: req.body.location.state
+  };
 };
+const response = await mongodb.getDb().db('cse341-team').collection('schedule').insertOne(newGame);
+
+if (response.acknowledged) {
+  res.status(201).json(response);
+} else {
+  res.status(500).json(response.error || 'Some error occurred while adding new game.');
+}
 
 const updateGame = async (req, res) => {
-    if (!ObjectId.isValid(req.params.id)) {
-        res
-          .status(400)
-          .json("Must include a valid game id");
-          return;
-      }
-    const gameId = new ObjectId(req.params.id);
-    const game = {
-        date: req.body.date,
-        opponent: req.body.opponent,
-        location : req.body.location
-    };
-    const response = await mongodb
-        .getDb()
-        .db("cse341-team")
-        .collection("schedule")
-        .replaceOne({_id: gameId }, game);
-
-    if (response.modifiedCount > 0) {
-        res.status(204).send();
-    } else {
-    res
-        .status(500)
-        .json(
-        response.error ||
-            "Some error occurred while updating game."
-        );
-    }
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must include a valid game id');
+    return;
+  }
+  const gameId = new ObjectId(req.params.id);
+  const game = {
+    date: req.body.date,
+    opponent: req.body.opponent,
+    city: req.body.location.city,
+    state: req.body.location.state
   };
+  const response = await mongodb
+    .getDb()
+    .db('cse341-team')
+    .collection('schedule')
+    .replaceOne({ _id: gameId }, game);
+
+  if (response.modifiedCount > 0) {
+    res.status(204).send();
+  } else {
+    res.status(500).json(response.error || 'Some error occurred while updating game.');
+  }
+};
 
 const deleteGame = async (req, res) => {
   if (!ObjectId.isValid(req.params.id)) {
