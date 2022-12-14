@@ -52,14 +52,18 @@ const addGame = async (req, res) => {
     city: req.body.location.city,
     state: req.body.location.state
   };
-};
-const response = await mongodb.getDb().db('cse341-team').collection('schedule').insertOne(newGame);
+  const response = await mongodb
+    .getDb()
+    .db('cse341-team')
+    .collection('schedule')
+    .insertOne(newGame);
 
-if (response.acknowledged) {
-  res.status(201).json(response);
-} else {
-  res.status(500).json(response.error || 'Some error occurred while adding new game.');
-}
+  if (response.acknowledged) {
+    res.status(201).json(response);
+  } else {
+    res.status(500).json(response.error || 'Some error occurred while adding new game.');
+  }
+};
 
 const updateGame = async (req, res) => {
   if (!ObjectId.isValid(req.params.id)) {
