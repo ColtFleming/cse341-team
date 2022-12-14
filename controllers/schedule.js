@@ -94,18 +94,6 @@ const updateGame = async (req, res) => {
         );
     }
   };
-  const response = await mongodb
-    .getDb()
-    .db('cse341-team')
-    .collection('schedule')
-    .replaceOne({ _id: gameId }, game);
-
-  if (response.modifiedCount > 0) {
-    res.status(204).send();
-  } else {
-    res.status(500).json(response.error || 'Some error occurred while updating game.');
-  }
-};
 
 const deleteGame = async (req, res) => {
   if (!ObjectId.isValid(req.params.id)) {
