@@ -6,7 +6,6 @@ const getAll = async (req, res) => {
     .getDb()
     .db("cse341-team")
     .collection("schedule")
-
     .find()
     .toArray((err, list) => {
       if (err) {
@@ -98,7 +97,7 @@ const updateGame = async (req, res) => {
   const response = await mongodb
     .getDb()
     .db('cse341-team')
-    .collection('roster')
+    .collection('schedule')
     .replaceOne({ _id: gameId }, game);
 
   if (response.modifiedCount > 0) {
