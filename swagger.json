@@ -629,10 +629,7 @@
                 "opponent": {
                   "example": "any"
                 },
-                "city": {
-                  "example": "any"
-                },
-                "state": {
+                "location": {
                   "example": "any"
                 }
               }
@@ -702,10 +699,7 @@
                 "opponent": {
                   "example": "any"
                 },
-                "city": {
-                  "example": "any"
-                },
-                "state": {
+                "location": {
                   "example": "any"
                 }
               }

@@ -49,8 +49,7 @@ const addGame = async (req, res) => {
   const newGame = {
     date: req.body.date,
     opponent: req.body.opponent,
-    city: req.body.location.city,
-    state: req.body.location.state
+    location: req.body.location
   };
   const response = await mongodb
     .getDb()
@@ -74,8 +73,7 @@ const updateGame = async (req, res) => {
   const game = {
     date: req.body.date,
     opponent: req.body.opponent,
-    city: req.body.location.city,
-    state: req.body.location.state
+    location: req.body.location
   };
   const response = await mongodb
     .getDb()
