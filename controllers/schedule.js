@@ -46,13 +46,6 @@ const addGame = async (req, res) => {
     res.send('date, opponent, and location fields are all required.');
     return;
   }
-  const newGame = {
-    date: req.body.date,
-    opponent: req.body.opponent,
-    location: {
-      city: req.body.city,
-      state: req.body.state
-    }
 
     const newGame = {
         date: req.body.date,
